@@ -1,0 +1,51 @@
+.search-margin {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+    margin: auto;
+    width: 600px;
+    background: transparent;
+    border: 1.5px solid #193B67;
+    padding-left: 20px;
+    color: 	#193B67;;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding: 17px 20px;
+    padding-right: 20px;
+    margin: 0%;
+    color: #fff;
+    background-color: #193B67;
+    border-left: 1.5px solid #193B67;
+    cursor: pointer;
+}
+
+
+
+.search-container input {
+    width: 600px;
+    height: 50px;
+    background: transparent;
+    color: black;
+    outline: none;
+    border: none;
+    font-size: 17px;
+}
+
+
+@media only screen and (max-width:760px){
+
+    .search-container {
+        width: 400px;
+    }
+}

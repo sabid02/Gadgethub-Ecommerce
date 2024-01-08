@@ -1,0 +1,131 @@
+body {
+    background-color: rgb(218, 224, 230);
+}
+
+.product-items-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(218, 224, 230);
+    margin: auto;
+}
+
+
+.product-items-cards {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 350px;
+    height: 600px;
+    margin: 30px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-items-info {
+    margin-top: 220px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: center; 
+    max-width: 300px;
+    background-color: #fff;
+}
+
+.product-items-list {
+    font-size: 13px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column;
+    margin: 5px;
+    height: 90px;
+}
+
+
+
+.product-items-info > h1 {
+    font-size: 20px;
+    color: #002D62;
+   
+}
+
+
+.product-items-title {
+    margin-top:10px;
+    margin-bottom:40px;
+    width: 330px;
+    height: 60px;
+}
+
+.product-price {
+    font-size: 18px;
+    justify-content: center; 
+    color: #AA0000;
+    margin-top: 20px;
+}
+
+.order-now-link {
+  margin: 5px;
+}
+
+.order-now-btn {
+    padding: 10px 50px;
+    border-radius: 2px;
+    justify-content: end;
+    margin-bottom: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #002D62;
+    color: #fff;
+
+}
+
+.product-img-section {
+    bottom: 20px;
+    padding: 6px 8px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+
+.product-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    margin-left: 95px;
+    width: auto;
+    max-height: 210px;
+    object-fit: fill;
+    transition: all 0.2s linear;
+}
+
+.product-img:hover {
+    transform: scale(1.2);
+}
+
+.order-now-btn:hover {
+    background-color: #fff;
+    color: #232f42;
+    transition: all 0.3s ease-out;
+    border: 1.5px solid #232f42;
+}
+
+
+.cards-section {
+    display: grid;
+    grid-template-columns: repeat(4, 370px);
+    /* grid-row-gap: 2px;
+    grid-column-gap: 10px; */
+}
+
+

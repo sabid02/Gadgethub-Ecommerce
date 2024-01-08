@@ -1,0 +1,138 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 120px;
+    padding-bottom: 30px;
+    width: 500px;
+    background: transparent;
+    border: 2px solid rgba(255,255, 255,.2);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.text {
+   color: #fff;
+   font-size: 38px;
+   font-weight: 700; 
+}
+
+.underline {
+    width: 61px;
+    height: 6px;
+    background: white;
+    border-radius: 9px;
+}
+
+.inputs {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 380px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgba(255,255, 255,.2);
+    border-radius: 30px;
+    padding: 20px;
+    color: 	#D3D3D3;
+}
+
+
+.input input {
+    width: 480px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 19px;
+}
+
+
+
+
+
+.forgot-password {
+    float: right;
+    margin-right: 62px;
+    margin-top: 1px;
+    color: #fff;
+    font-size: 13px;
+}
+
+.forgot-password span {
+    color: #3f99df;
+    cursor: pointer;
+}
+
+.submit-container {
+    display: flex;
+    gap: 30px;
+    margin: 40px auto;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 59px;
+    color: #676767;
+    background-color: #fff;
+    font-size: 19px;
+    font-weight:  700;
+    cursor: pointer;
+}
+
+.gray {
+    color: #fff;
+    background: transparent;
+    border: 2px solid rgba(255,255, 255,.2);
+}
+
+.gray:hover {
+    background-color: #fff;
+    color: #232f42;
+    transition: all 0.3s ease-out;
+}
+
+@media only screen and (max-width:1560px){
+
+    .container {
+        margin-top: 120px;
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 9px;
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width:760px){
+
+    .container {
+        width: 460px;
+    }
+}
