@@ -32,13 +32,13 @@
 
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 8px;
     list-style: none;
     text-align: center;
     width: 60vw;
     justify-content: end;
-    margin: 2rem;
+    /* margin: 1rem; */
   }
 
 

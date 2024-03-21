@@ -225,6 +225,19 @@ const data = [
     },
     price: "Price : 52000৳",
   },
+  {
+    id: 18,
+    category: "vrbox",
+    img: "Photo by Pixabay from Pexels: https://www.pexels.com/photo/red-dahlia-flower-60597/",
+    title: "Meta Quest 2 128 GB All-in-One VR System",
+    description: {
+      line1: `Blazing-fast processor and highest-resolution display`,
+      line2: "Two Touch Controllers",
+      line3: "Storage: 128 GB",
+      line4: "Compatible with PC VR",
+    },
+    price: "Price : 52000৳",
+  },
 ];
 
 export default data;

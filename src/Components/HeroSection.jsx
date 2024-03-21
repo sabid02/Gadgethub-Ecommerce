@@ -17,7 +17,7 @@ function HeroSection() {
           buttonSize="btn--large"
           to="/products-items"
         >
-          PRODUCTS
+          ALL PRODUCTS
         </Button>
 
         <Button

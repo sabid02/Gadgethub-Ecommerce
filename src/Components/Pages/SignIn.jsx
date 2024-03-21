@@ -5,41 +5,28 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const SignIn = () => {
   const navigate = useNavigate();
   const [data, setData] = useState({
-    name: "",
     email: "",
     password: "",
   });
 
-  const signUpUser = async (e) => {
+  const loginUser = async (e) => {
     e.preventDefault();
-    const { name, email, password } = data;
-
+    const { email, password } = data;
     try {
-      const response = await axios.post("/sign-up", {
-        name,
+      const { data } = await axios.post("./sign-in", {
         email,
         password,
       });
-
-      if (response.data.error) {
-        toast.error(response.data.error);
+      if (data.error) {
+        toast.error(data.error);
       } else {
-        setData({
-          ...data,
-          name: "",
-          email: "",
-          password: "",
-        });
-        toast.success("Sign up successful");
-        navigate("/sign-in");
+        setData({});
+        navigate("/");
       }
-    } catch (error) {
-      console.error("Error occurred during sign up:", error);
-      toast.error("An error occurred. Please try again.");
-    }
+    } catch (error) {}
   };
 
   return (
@@ -47,20 +34,11 @@ const SignUp = () => {
       <div className="sign-up">
         <div className="container">
           <div className="header">
-            <div className="text">Sign Up</div>
+            <div className="text">Sign in</div>
             <div className="underline"></div>
           </div>
-          <form onSubmit={signUpUser}>
+          <form onSubmit={loginUser}>
             <div className="inputs">
-              <div className="input">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  value={data.name}
-                  onChange={(e) => setData({ ...data, name: e.target.value })}
-                />
-                <i className="fa-solid fa-user"></i>
-              </div>
               <div className="input">
                 <input
                   type="email"
@@ -94,4 +72,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignIn;

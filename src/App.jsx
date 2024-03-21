@@ -6,31 +6,37 @@ import Products from "./Components/Pages/Products/Products";
 import Services from "./Components/Pages/Services";
 import ProductsCards from "./Components/Pages/Products/ProductsCards";
 import data from "./Components/Pages/Products/ProductsData";
+import SignIn from "./Components/Pages/SignIn";
+import axios from "axios";
+import { Toaster } from "react-hot-toast";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom/cjs/react-router-dom.min";
+axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.withCredentials = true;
+
+import { Routes, Route } from "react-router-dom";
+
+// Previous imports and configurations remain the same
 
 function App() {
   return (
     <>
-      <Router>
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/products" component={Products} />
-          <Route path="/products-items/:category">
-            <ProductsCards allProducts={data} />
-          </Route>
-          <Route path="/products-items">
-            <ProductsCards allProducts={data} />
-          </Route>
-          <Route path="/services" component={Services} />
-          <Route path="/sign-up" component={SignUp} />
-        </Switch>
-      </Router>
+      <Navbar />
+      <Toaster position="bottom-right" toastOptions={{ duration: 4000 }} />
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route
+          path="/products-items/:category"
+          element={<ProductsCards allProducts={data} />}
+        />
+        <Route
+          path="/products-items"
+          element={<ProductsCards allProducts={data} />}
+        />
+        <Route path="/services" element={<Services />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/sign-in" element={<SignIn />} />
+      </Routes>
     </>
   );
 }
