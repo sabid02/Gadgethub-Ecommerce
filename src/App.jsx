@@ -9,17 +9,16 @@ import data from "./Components/Pages/Products/ProductsData";
 import SignIn from "./Components/Pages/SignIn";
 import axios from "axios";
 import { Toaster } from "react-hot-toast";
+import { UserContextProvider } from "../context/userContext";
 
 axios.defaults.baseURL = "http://localhost:8000";
 axios.defaults.withCredentials = true;
 
 import { Routes, Route } from "react-router-dom";
 
-// Previous imports and configurations remain the same
-
 function App() {
   return (
-    <>
+    <UserContextProvider>
       <Navbar />
       <Toaster position="bottom-right" toastOptions={{ duration: 4000 }} />
       <Routes>
@@ -37,7 +36,7 @@ function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/sign-in" element={<SignIn />} />
       </Routes>
-    </>
+    </UserContextProvider>
   );
 }
 

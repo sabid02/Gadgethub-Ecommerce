@@ -2,7 +2,7 @@ const data = [
   {
     id: 1,
     category: "camera",
-    img: "camera.jpeg",
+    img: "https://i.postimg.cc/D0Q1BVk3/Untitled-design.png",
     title: "Canon EOS 2000D DSLR Camera (Body Only)",
     description: {
       line1: "24.1MP APS-C CMOS Sensor",

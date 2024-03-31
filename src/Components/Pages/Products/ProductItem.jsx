@@ -10,7 +10,8 @@ function ProductItem(props) {
           <div className="product-img-section">
             <img
               className="product-img"
-              src={`../images/product-img/${props.img}`}
+              src={props.img}
+              // {`../images/product-img/${props.img}`}
             />
           </div>
           <div className="product-items-info">

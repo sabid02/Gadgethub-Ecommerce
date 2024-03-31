@@ -61,6 +61,10 @@
     transition: all 0.3s ease-out;
 }
 
+.sign-out-link:hover {
+   color: red;
+}
+
 .fa-bars {
     color: #fff;
 }

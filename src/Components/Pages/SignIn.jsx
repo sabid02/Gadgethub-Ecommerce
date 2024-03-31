@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./SignUp.css";
 import "../../App.css";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../../context/userContext";
 
 const SignIn = () => {
-  const navigate = useNavigate();
+  const { setUser } = useContext(UserContext); // Get setUser from UserContext
+
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -16,17 +17,19 @@ const SignIn = () => {
     e.preventDefault();
     const { email, password } = data;
     try {
-      const { data } = await axios.post("./sign-in", {
+      const { data: responseData } = await axios.post("./sign-in", {
         email,
         password,
       });
-      if (data.error) {
-        toast.error(data.error);
+      if (responseData.error) {
+        toast.error(responseData.error);
       } else {
-        setData({});
-        navigate("/");
+        setUser(responseData.user);
+        window.location.href = "/";
       }
-    } catch (error) {}
+    } catch (error) {
+      console.error("Error signing in:", error);
+    }
   };
 
   return (
