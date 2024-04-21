@@ -20,5 +20,6 @@ router.get("/", test);
 router.post("/sign-up", registerUser);
 router.post("/sign-in", signInUser);
 router.get("/profile", getProfile);
+// router.get("/products", getAllProducts);
 
 module.exports = router;

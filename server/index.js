@@ -8,16 +8,16 @@ const bodyparser = require("body-parser");
 const cookieParser = require("cookie-parser");
 
 // database connection
+
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => console.log("Database connected"))
   .catch((err) => console.log("Database not connected", err));
 
-// middleware
-// app.use(express.json());
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
+// app.use(cors());
 
 app.use(passport.initialize(undefined));
 

@@ -49,3 +49,37 @@
         width: 400px;
     }
 }
+
+.business-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set a height to center vertically */
+  }
+  
+  .business-details {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .business-details h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .business-details p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .highlight {
+    color: #007bff;
+    font-weight: bold;
+  }
+  

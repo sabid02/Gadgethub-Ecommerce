@@ -10,7 +10,7 @@ function Cards() {
   });
   return (
     <div className="cards">
-      <h1>Check out these Techs</h1>
+      <h1>Our Tech Categories</h1>
 
       <div className="cards__container">
         <div className="cards__wrapper">
